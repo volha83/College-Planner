@@ -1,16 +1,21 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import AdmissionTasksPage from './pages/AdmissionTasks/AdmissionTasksPage';
+import ShoppingPage from './pages/CollegeShopping/ShoppingPage';
 import './App.css';
 import React from 'react';
-// import Navbar from "./components/Navbar/Navbar";
 
 function App() {
-  console.log('cod', import.meta.env.VITE_AIRTABLE_BASE_ID);
-  console.log('name table', import.meta.env.VITE_TABLE_NAME);
-  console.log('all:', import.meta.env);
   return (
-    <div>
-      <h1> College Planner</h1>
-      <p> text </p>
-    </div>
+    <Router>
+      <Navbar />
+      <div className="app-container">
+        <Routes>
+          <Route path="/" element={<AdmissionTasksPage />} />
+          <Route path="/shopping" element={<ShoppingPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
