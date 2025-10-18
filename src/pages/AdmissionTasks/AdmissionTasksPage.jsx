@@ -35,16 +35,12 @@ export default function AdmissionTasksPage() {
   const [form, setForm] = useState(emptyForm);
 
   //
-  // const url = client.url;
-  // const token = client.token;
-
-  //
   const encodeUrl = useCallback(
     () => client.bindEncodeUrl({ sortField, sortDirection, queryString })(),
     [sortField, sortDirection, queryString]
   );
 
-  // READ
+  // Read
   useEffect(() => {
     (async () => {
       dispatch({ type: actions.fetchStart });
@@ -57,7 +53,7 @@ export default function AdmissionTasksPage() {
     })();
   }, [encodeUrl]);
 
-  // CREATE
+  // Create
   const addCollege = async () => {
     if (!form.Name.trim()) return alert('Name is required');
     dispatch({ type: actions.startRequest });
@@ -116,21 +112,9 @@ export default function AdmissionTasksPage() {
           }
         >
           <option value="Deadline">Deadline</option>
-          <option value="Name">Name</option>
+          <option value="State">State</option>
           <option value="Priority">Priority</option>
           <option value="Status">Status</option>
-        </select>
-        <select
-          value={sortDirection}
-          onChange={(e) =>
-            dispatch({
-              type: actions.setSortDirection,
-              sortDirection: e.target.value,
-            })
-          }
-        >
-          <option value="asc">asc</option>
-          <option value="desc">desc</option>
         </select>
       </div>
 
@@ -138,7 +122,7 @@ export default function AdmissionTasksPage() {
         <h2>Add College</h2>
         <div className="grid">
           <label>
-            {' '}
+            {/* {' '} */}
             Name
             <input
               name="Name"
