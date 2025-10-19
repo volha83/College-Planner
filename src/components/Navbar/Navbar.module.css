@@ -1,24 +1,51 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
   background-color: #3f51b5;
   color: white;
-  padding: 10px 20px;
-  width: 100%;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-  font-size: 3em;
-  font-weight: bold;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  margin: 0;
 }
 
-.links a {
+.links {
+  display: flex;
+  gap: 18px;
+}
+
+.link {
   color: white;
-  margin-left: 20px;
   text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease,
+    transform 0.06s ease;
+}
+.link:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
 }
 
+/* активный линк визуально отличается */
 .active {
-  text-decoration: underline;
+  background: white;
+  color: #303f9f;
 }
