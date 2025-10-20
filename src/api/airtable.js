@@ -1,19 +1,18 @@
 // .env.local: VITE_PAT, VITE_BASE_ID, VITE_TABLE_NAME
 
 const url = `https://api.airtable.com/v0/${import.meta.env.VITE_BASE_ID}/${import.meta.env.VITE_TABLE_NAME}`;
-
 const token = `Bearer ${import.meta.env.VITE_PAT}`;
 
 //
 function makeEncodeUrl({ url, sortField, sortDirection, queryString }) {
   return function encodeUrl() {
-    let sortQuery = `sort[0][field]=${sortField}&sort[0][direction]=${sortDirection}`;
+    const sortQuery = `sort[0][field]=${sortField}&sort[0][direction]=${sortDirection}`;
     let searchQuery = '';
     if (queryString) {
-      // search by {Name}
-      searchQuery = `&filterByFormula=SEARCH("${queryString}",+{Name})`;
+      const formula = `SEARCH("${String(queryString).replace(/"/g, '\\"')}", {Name})`;
+      searchQuery = `&filterByFormula=${encodeURIComponent(formula)}`;
     }
-    return encodeURI(`${url}?${sortQuery}${searchQuery}`);
+    return `${url}?${sortQuery}${searchQuery}`;
   };
 }
 
