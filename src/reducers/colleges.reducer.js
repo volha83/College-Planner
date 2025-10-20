@@ -52,8 +52,6 @@ export function reducer(state, action) {
       return { ...state, list: state.list.filter((r) => r.id !== action.id) };
     case actions.setSortField:
       return { ...state, sortField: action.sortField };
-    // case actions.setSortDirection:
-    //   return { ...state, sortDirection: action.sortDirection };
     case actions.setQuery:
       return { ...state, queryString: action.queryString };
     default:

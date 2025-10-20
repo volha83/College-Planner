@@ -24,7 +24,6 @@ export default function ShoppingPage() {
 
   const [form, setForm] = useState(emptyForm);
 
-  // 1) Load from LocalStorage on mount
   useEffect(() => {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
@@ -45,13 +44,11 @@ export default function ShoppingPage() {
     }
   }, []);
 
-  // 2) Save to LocalStorage on any change (skip first render)
   useEffect(() => {
     if (isLoading) return;
     localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
   }, [items, isLoading]);
 
-  // 3) Derived data — объявлено ДО return
   const sortedFiltered = useMemo(() => {
     let arr = items;
 
@@ -83,7 +80,6 @@ export default function ShoppingPage() {
     [items]
   );
 
-  // 4) Actions
   const addItem = () => {
     const name = form.name.trim();
     if (!name) return;
@@ -109,10 +105,26 @@ export default function ShoppingPage() {
     dispatch({ type: actions.updateItem, item: { ...it, name: name.trim() } });
   };
 
-  // 5) Render
   return (
     <div className="shop-page">
-      <h1>College Shopping List</h1>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          marginBottom: '1em',
+        }}
+      >
+        <h1 style={{ margin: 0 }}>College Shopping List</h1>
+        <img
+          src="/src/assets/shopping-list.jpg"
+          alt="College shopping illustration"
+          style={{
+            width: '5em',
+            height: '5em',
+          }}
+        />
+      </div>
 
       <div className="shop-toolbar">
         <input
@@ -181,7 +193,14 @@ export default function ShoppingPage() {
               <option>Kitchen</option>
             </select>
           </label>
-          <div className="align-end">
+
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'flex-end',
+              marginTop: '1em',
+            }}
+          >
             <button
               className="btn btn-primary"
               disabled={isSaving || !form.name.trim()}

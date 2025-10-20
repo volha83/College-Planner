@@ -44,7 +44,6 @@
   transform: translateY(-1px);
 }
 
-/* активный линк визуально отличается */
 .active {
   background: white;
   color: #303f9f;

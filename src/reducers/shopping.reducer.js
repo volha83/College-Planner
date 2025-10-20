@@ -3,9 +3,9 @@ export const initialState = {
   isLoading: true,
   isSaving: false,
   errorMessage: '',
-  sortField: 'name', // варианты: name | category | packed
+  sortField: 'name',
   queryString: '',
-  category: 'All', // фильтр
+  category: 'All',
 };
 
 export const actions = {
