@@ -1,5 +1,7 @@
 # Final Project for React course with Code the Dream
 
+College Planner - Your Admission and College Prepare Assistance
+
 #
 
 A simple React (Vite) application with two pages
