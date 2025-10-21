@@ -26,10 +26,10 @@ http://college-planner-psi.vercel.app
     2.	Clone the repo locally
     3.	Scaffold Vite using CLI:
     npm create vite@latest . -- --template react
+    4. npm install
+    5. Fill in your Airtable token, base ID, and table name inside .env.local
+    6. Start the development server:
+       npm run dev
 
-npm install 4. Copy the environment example filecp
-.env.local.example .env.local 5. Fill in your Airtable token, base ID, and table name inside .env.local 6. Start the development server
-npm run dev
-
-- Open the Local link shown in the CLI (usually http://localhost:5173/)
+- Open the Local link shown in the CLI http://localhost:5173/
 - You should see the application running in your browser.

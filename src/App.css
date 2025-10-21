@@ -61,16 +61,6 @@ body {
   cursor: not-allowed;
 }
 
-.btn-primary {
-  background: #3f51b5;
-  border-color: #3f51b5;
-  color: #fff;
-}
-.btn-primary:hover {
-  background: #3342a0;
-  border-color: #3342a0;
-}
-
 .btn-ghost {
   background: #fff;
 }
@@ -99,33 +89,29 @@ body {
   border: 1px solid #c7d2fe;
   font-size: 12px;
 }
-body {
-  font-family: system-ui, 'Noto Sans', Arial, sans-serif;
-}
 
 h1,
-h2,
-h3 {
+h2 {
   font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-  letter-spacing: 0.3px;
+  letter-spacing: 1px;
+}
+h1 {
+  font-size: 2.5em;
+}
+h2 {
+  font-size: 2.3em;
 }
 
 .btn-primary {
   background: #3f51b5;
   border-color: #3f51b5;
   color: #fff;
+  padding-left: 4em;
+  padding-right: 4em;
+  cursor: 'pointer';
 }
 
 .btn-primary:hover {
   background: #a5aac2;
   border-color: #969ab2;
-}
-.btn-primary {
-  background: '#3f51b5';
-  color: 'white';
-  padding: '0.6em 1.4em';
-  border: 'none';
-  cursor: 'pointer';
-  padding-left: 3em;
-  padding-right: 3em;
 }
