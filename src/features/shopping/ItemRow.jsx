@@ -50,19 +50,28 @@ export default function ItemRow({ item, onToggle, onEdit, onDelete }) {
           </>
         ) : (
           <>
-            <button
-              type="button"
+            <input
+              type="checkbox"
+              checked={item.packed}
+              onChange={() => onToggle(item.id)}
+              aria-label={`Mark ${item.name} packed`}
+              style={{ marginRight: 8 }}
+            />
+            <div
               onClick={() => onToggle(item.id)}
-              title="Toggle packed"
-              className="btn btn-ghost"
-              style={{ padding: '4px 8px' }}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 8,
+                cursor: 'pointer',
+              }}
             >
-              ✔
-            </button>
-            <span onClick={() => setIsEditing(true)}>{item.name}</span>
-            <span style={{ color: '#6b7280', marginLeft: 8, fontSize: 12 }}>
-              x{item.qty} · {item.category}
-            </span>
+              <span>{item.name}</span>
+
+              <span style={{ color: '#6b7280', marginLeft: 8, fontSize: 12 }}>
+                x{item.qty} · {item.category}
+              </span>
+            </div>
             <div style={{ display: 'flex', gap: 8 }}>
               <button
                 type="button"
