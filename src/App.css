@@ -120,7 +120,7 @@ h3 {
   background: #a5aac2;
   border-color: #969ab2;
 }
-.btn-primary {
+/* .btn-primary {
   background: '#3f51b5';
   color: 'white';
   padding: '0.6em 1.4em';
@@ -128,4 +128,16 @@ h3 {
   cursor: 'pointer';
   padding-left: 3em;
   padding-right: 3em;
+} */
+.btn-primary {
+  background: #3f51b5;
+  border-color: #3f51b5;
+  color: #fff;
+  padding-left: 3em; /* если нужна широкая кнопка Add */
+  padding-right: 3em;
+}
+
+.btn-primary:hover {
+  background: #a5aac2;
+  border-color: #969ab2;
 }

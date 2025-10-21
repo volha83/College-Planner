@@ -1,15 +1,15 @@
 .page {
-  padding: 24px;
+  padding: 0 20px;
   max-width: 100%;
   /* margin: 0 auto; */
-  margin: 2em;
+  margin: 2em auto;
 }
 
 .toolbar {
   display: flex;
   gap: 8px;
   align-items: center;
-  margin-bottom: 16px;
+  margin: 16px 0 20px;
 }
 
 .card {
@@ -29,6 +29,15 @@
 .form .notes {
   display: block;
   margin-top: 8px;
+}
+
+.form .actions {
+  display: flex;
+  justify-content: flex-end;
+}
+.form .actions .btn {
+  padding-left: 3em;
+  padding-right: 3em;
 }
 
 .list {
@@ -81,7 +90,14 @@ button {
   border-radius: 6px;
   border: 1px solid #ccc;
 }
-button {
+
+@media (max-width: 860px) {
+  .form .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* button {
   font-size: 1rem;
   padding: 10px 20px;
   background-color: #3f51b5;
@@ -101,4 +117,4 @@ button:hover {
   padding-right: 3em;
   display: block;
   margin-left: auto;
-}
+} */
