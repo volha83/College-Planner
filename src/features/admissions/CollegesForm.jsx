@@ -136,7 +136,6 @@ export default function CollegesForm({ onAdd, isSaving }) {
             />
           </label>
         </div>
-
         <label className="notes">
           Notes
           <textarea
@@ -147,12 +146,20 @@ export default function CollegesForm({ onAdd, isSaving }) {
           />
         </label>
 
-        <button
-          className="btn btn-primary"
-          disabled={isSaving || !form.Name.trim()}
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'flex-end',
+            marginTop: '1em',
+          }}
         >
-          {isSaving ? 'Saving…' : 'Add'}
-        </button>
+          <button
+            className="btn btn-primary"
+            disabled={isSaving || !form.Name.trim()}
+          >
+            {isSaving ? 'Saving…' : 'Add'}
+          </button>
+        </div>
       </form>
     </div>
   );

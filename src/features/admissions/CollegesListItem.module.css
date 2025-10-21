@@ -1,23 +1,16 @@
 .item {
   border: 1px solid #e5e7eb;
   border-radius: 12px;
-  padding: 10px;
+  padding: 12px;
   background: #fff;
+  list-style: none;
 }
 
 .row {
   display: flex;
-  gap: 10px;
-  align-items: center;
+  gap: 12px;
+  align-items: flex-start;
   justify-content: space-between;
-}
-
-.iconBtn {
-  background: none;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  padding: 4px 8px;
-  cursor: pointer;
 }
 
 .title {
@@ -25,13 +18,33 @@
   flex-direction: column;
   gap: 2px;
   cursor: text;
+  font-size: 1.5em;
+  color: darkblue;
 }
 .meta {
   color: #6b7280;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .actions {
   display: flex;
   gap: 8px;
+}
+
+.badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.link {
+  color: #3f51b5;
+  text-decoration: underline;
+  font-size: 1.3em;
+  padding: 1em;
+  margin: 0.5em;
+}
+.link:hover {
+  color: #0227fa;
 }
