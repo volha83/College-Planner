@@ -115,3 +115,14 @@ h2 {
   background: #a5aac2;
   border-color: #969ab2;
 }
+
+footer {
+  background-color: #f2f2f2;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1em;
+  color: #555;
+}

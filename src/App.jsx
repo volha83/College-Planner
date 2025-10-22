@@ -7,6 +7,7 @@ import './App.css';
 import React from 'react';
 
 function App() {
+  const thisYear = new Date().getFullYear();
   return (
     <Router>
       <Navbar />
@@ -16,9 +17,9 @@ function App() {
           <Route path="/shopping" element={<ShoppingPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <footer>© Volha Padlipskaya {thisYear}</footer>
       </div>
     </Router>
   );
 }
-
 export default App;
