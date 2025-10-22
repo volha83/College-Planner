@@ -206,14 +206,14 @@ export default function ShoppingPage() {
               disabled={isSaving || !form.name.trim()}
               onClick={addItem}
             >
-              {isSaving ? 'Saving…' : 'Add'}
+              {isSaving ? 'Saving...' : 'Add'}
             </button>
           </div>
         </div>
       </div>
 
       {isLoading ? (
-        <div className="muted">Loading…</div>
+        <div className="muted">Loading...</div>
       ) : errorMessage ? (
         <div className="error">Error: {errorMessage}</div>
       ) : sortedFiltered.length === 0 ? (
