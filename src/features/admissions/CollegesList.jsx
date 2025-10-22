@@ -10,7 +10,7 @@ export default function CollegesList({
   onUpdateOne,
   onDeleteOne,
 }) {
-  if (isLoading) return <p className="muted">Loading colleges…</p>;
+  if (isLoading) return <p className="muted">Loading colleges...</p>;
   if (!records || records.length === 0)
     return <p className="muted">No colleges yet!</p>;
 

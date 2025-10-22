@@ -17,7 +17,7 @@ function App() {
           <Route path="/shopping" element={<ShoppingPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <footer>© Volha Padlipskaya {thisYear}</footer>
+        <footer> &#169; Volha Padlipskaya {thisYear} </footer>
       </div>
     </Router>
   );
