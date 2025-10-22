@@ -42,5 +42,5 @@ Next you can add items to the categories required for the dormitiry (page - Coll
 <img width="1044" height="842" alt="Image" src="https://github.com/user-attachments/assets/2fb6788f-28fa-412a-84b7-03576d2030f3" />
 
 
-To catch all paths that do not match any of the previous routes and if the used opens non-existent URL - the Page Not Found will appear:
+To catch all paths that do not match any of the previous routes and if the user opens non-existent URL - the Page Not Found will appear:
 <img width="1044" height="413" alt="Image" src="https://github.com/user-attachments/assets/8240bb96-bd8d-4f2f-af40-2a12d7447c86" />
